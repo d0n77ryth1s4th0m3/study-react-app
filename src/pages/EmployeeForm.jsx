@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { employeesAPI } from '../services/api';
+import { STRINGS } from '../constants/strings';
 
 function EmployeeForm() {
   const { id } = useParams();
@@ -231,10 +232,10 @@ function EmployeeForm() {
             className="btn btn-primary"
             disabled={loading}
           >
-            {loading ? 'Сохранение...' : (isEdit ? 'Обновить' : 'Добавить')}
+            {loading ? STRINGS.SAVING : (isEdit ? STRINGS.UPDATE : STRINGS.ADD)}
           </button>
           <Link to="/" className="btn">
-            Отмена
+            {STRINGS.CANCEL}
           </Link>
         </div>
       </form>

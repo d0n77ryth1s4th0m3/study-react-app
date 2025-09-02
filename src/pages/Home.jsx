@@ -1,53 +1,30 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { employeesAPI } from '../services/api';
+import { useEmployees } from '../hooks/useEmployees';
+import { STRINGS } from '../constants/strings';
 
 function Home() {
-  const [employees, setEmployees] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  // GET - получение списка сотрудников
-  const fetchEmployees = async () => {
-    try {
-      setLoading(true);
-      const response = await employeesAPI.getAll();
-      setEmployees(response.data);
-    } catch (err) {
-      setError('Ошибка при загрузке сотрудников');
-      console.error('Error fetching employees:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { employees, loading, error, deleteEmployee, setError } = useEmployees();
 
   // DELETE - удаление сотрудника
   const handleDeleteEmployee = async (id) => {
-    if (window.confirm('Вы уверены, что хотите удалить сотрудника?')) {
+    if (window.confirm(STRINGS.CONFIRM_DELETE_EMPLOYEE)) {
       try {
-        await employeesAPI.delete(id);
-        // Обновляем список после удаления
-        setEmployees(employees.filter(emp => emp.id !== id));
+        await deleteEmployee(id);
       } catch (err) {
-        setError('Ошибка при удалении сотрудника');
-        console.error('Error deleting employee:', err);
+        // Error already handled in hook
       }
     }
   };
 
-  useEffect(() => {
-    fetchEmployees();
-  }, []);
-
-  if (loading) return <div className="page-container">Загрузка...</div>;
+  if (loading) return <div className="page-container">{STRINGS.LOADING}</div>;
   if (error) return <div className="page-container">Ошибка: {error}</div>;
 
   return (
     <div className="page-container">
       <div className="page-header">
-        <h1>👮 Сотрудники службы безопасности</h1>
+        <h1>{STRINGS.EMPLOYEES_TITLE}</h1>
         <Link to="/employee/add" className="btn btn-primary">
-          ➕ Добавить сотрудника
+          {STRINGS.ADD_EMPLOYEE}
         </Link>
       </div>
 
@@ -85,7 +62,7 @@ function Home() {
 
       {employees.length === 0 && (
         <div className="empty-state">
-          <p>Сотрудники не найдены</p>
+          <p>{STRINGS.EMPLOYEES_NOT_FOUND}</p>
         </div>
       )}
     </div>
