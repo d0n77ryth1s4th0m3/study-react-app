@@ -1,0 +1,19 @@
+{
+    "users" : [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email" : "johndoe@gmail.com",
+            "phone": "+7 (800) 555-35-35",
+            "avatar":"https://via.placeholder.com/150"
+        },
+        {
+            "id": 2,
+            "name":"Ian Curtis",
+            "email":"joydivision@gmail.com",
+            "phone":"+7 (666) 999-54-42",
+            "avatar":"https://via.placeholder.com/150"
+
+        }
+    ]
+}
