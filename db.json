@@ -1,19 +1,39 @@
 {
-    "users" : [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email" : "johndoe@gmail.com",
-            "phone": "+7 (800) 555-35-35",
-            "avatar":"https://via.placeholder.com/150"
-        },
-        {
-            "id": 2,
-            "name":"Ian Curtis",
-            "email":"joydivision@gmail.com",
-            "phone":"+7 (666) 999-54-42",
-            "avatar":"https://via.placeholder.com/150"
-
-        }
-    ]
+  "securityEmployees": [
+    {
+      "id": 1,
+      "name": "Иван Петров",
+      "position": "Старший офицер безопасности",
+      "department": "Гостиница 'Престиж'",
+      "shift": "Ночная смена (22:00-06:00)",
+      "phone": "+7 (999) 123-45-67",
+      "email": "ivan.petrov@prestige-hotel.ru",
+      "skills": ["Кризисное управление", "Первая помощь", "Навыки наблюдения"],
+      "status": "На дежурстве",
+      "image": "https://via.placeholder.com/150/007bff/ffffff?text=IP"
+    },
+    {
+      "id": 2,
+      "name": "Мария Сидорова",
+      "position": "Офицер контроля доступа",
+      "department": "Гостиница 'Люкс'", 
+      "shift": "Дневная смена (08:00-16:00)",
+      "phone": "+7 (999) 765-43-21",
+      "email": "maria.sidorova@lux-hotel.ru",
+      "skills": ["Контроль доступа", "Работа с CCTV", "Гостевой сервис"],
+      "status": "Выходной",
+      "image": "https://via.placeholder.com/150/28a745/ffffff?text=MS"
+    }
+  ],
+  "securityIncidents": [
+    {
+      "id": 1,
+      "title": "Несанкционированный доступ в номер",
+      "date": "2024-01-15",
+      "hotel": "Гостиница 'Престиж'",
+      "severity": "Средний",
+      "status": "Решено",
+      "description": "Гость потерял ключ-карту, посторонний человек нашел и попытался войти в номер"
+    }
+  ]
 }
