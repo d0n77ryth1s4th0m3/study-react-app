@@ -10,19 +10,21 @@
       "email": "ivan.petrov@prestige-hotel.ru",
       "skills": ["Кризисное управление", "Первая помощь", "Навыки наблюдения"],
       "status": "На дежурстве",
-      "image": "https://via.placeholder.com/150/007bff/ffffff?text=IP"
+      "image": "https://via.placeholder.com/150/007bff/ffffff?text=IP",
+      "hireDate": "2023-05-15"
     },
     {
       "id": 2,
-      "name": "Мария Сидорова",
+      "name": "Мария Сидорова", 
       "position": "Офицер контроля доступа",
-      "department": "Гостиница 'Люкс'", 
-      "shift": "Дневная смена (08:00-16:00)",
+      "department": "Гостиница 'Люкс'",
+      "shift": "Дневная смена (08:00-16:00)", 
       "phone": "+7 (999) 765-43-21",
       "email": "maria.sidorova@lux-hotel.ru",
       "skills": ["Контроль доступа", "Работа с CCTV", "Гостевой сервис"],
       "status": "Выходной",
-      "image": "https://via.placeholder.com/150/28a745/ffffff?text=MS"
+      "image": "https://via.placeholder.com/150/28a745/ffffff?text=MS",
+      "hireDate": "2023-08-20"
     }
   ],
   "securityIncidents": [
@@ -30,10 +32,13 @@
       "id": 1,
       "title": "Несанкционированный доступ в номер",
       "date": "2024-01-15",
+      "time": "14:30",
       "hotel": "Гостиница 'Престиж'",
       "severity": "Средний",
       "status": "Решено",
-      "description": "Гость потерял ключ-карту, посторонний человек нашел и попытался войти в номер"
+      "description": "Гость потерял ключ-карту, посторонний человек нашел и попытался войти в номер",
+      "assignedEmployeeId": 1,
+      "resolution": "Заблокирована старая ключ-карта, выдана новая"
     }
   ]
 }

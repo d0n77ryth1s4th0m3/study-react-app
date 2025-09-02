@@ -187,3 +187,123 @@ p {
   font-weight: bold;
   margin: 0;
 }
+
+/* Стили для статусов */
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-on {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-off {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Заголовок страницы */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Карточка сотрудника */
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  border-left: 4px solid #007bff;
+}
+
+.employee-info {
+  flex: 1;
+}
+
+.employee-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Детальная информация */
+.employee-detail {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.employee-profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.employee-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.employee-position {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.employee-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-weight: bold;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+/* Навыки */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background-color: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+/* Кнопки действий */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Состояние пустого списка */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
